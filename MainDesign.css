@@ -1,0 +1,114 @@
+body
+{
+    background-color: gray;
+    color: orange;
+    min-height: 100vh;
+}
+h1
+{
+    text-align: center;
+    color: orange;
+}
+h2
+{
+    color: orange;
+}
+ul
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+ul li
+{
+    float: left;
+}
+ul li a
+{
+    display: block;
+    color: orange;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+ul li a:hover
+{
+    transition-duration: 0.5s;
+    background-color: orange;
+    color: white;
+    height: 30;
+}
+nav
+{
+    position:relative;
+    top: 0;
+    left: 0;
+    padding: 1px 4px;
+    background-color: rgb(159, 159, 159);
+}
+footer
+{
+    left: 0;
+    bottom: 0;
+    position: bottom;
+    height: 100px;
+    width: 100%;
+    padding: none;
+    margin: none;
+    background-color: rgb(159, 159, 159);
+    color: rgb(124, 115, 98);
+}
+.textimagecontainer 
+{
+    position:relative;
+    text-align: center;
+    color: white;
+}
+.picturecentered 
+{
+  top: 50%;
+  left: 50%;
+}
+.two-column 
+{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.slideshowImage {
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slideshowImage.active 
+{
+    animation: slideInFromLeft 1s ease forwards;
+    opacity: 1;
+}
+
+@keyframes slideInFromLeft 
+{
+    from 
+    {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to 
+    {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.slideshow-container 
+{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
